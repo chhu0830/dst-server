@@ -36,16 +36,16 @@ cat <<- EOF > cluster.ini\n\
     max_players = 20\n\
     pvp = false\n\
     pause_when_empty = true\n\
-\n\
+    \n\
     [NETWORK]\n\
     cluster_description =\n\
     cluster_name = \$CLUSTER_NAME\n\
     cluster_intention = cooperative\n\
     cluster_password = \$CLUSTER_PASS\n\
-\n\
+    \n\
     [MISC]\n\
     console_enabled = true\n\
-\n\
+    \n\
     [SHARD]\n\
     shard_enabled = true\n\
     bind_ip = 127.0.0.1\n\
@@ -60,17 +60,17 @@ if [ ! -f server.ini ]; then\n\
 cat <<- EOF > server.ini\n\
     [NETWORK]\n\
     server_port = 11000\n\
-\n\
-\n\
+    \n\
+    \n\
     [SHARD]\n\
     is_master = true\n\
-\n\
-\n\
+    \n\
+    \n\
     [STEAM]\n\
     master_server_port = 27018\n\
     authentication_port = 8768\n\
-\n\
-\n\
+    \n\
+    \n\
     [ACCOUNT]\n\
     encode_user_path = true\n\
 EOF\n\
@@ -79,31 +79,31 @@ fi\n\
 cd \$CLUSTER_PATH/\$CLUSTER_NAME/Caves \n\
 if [ ! -f server.ini ]; then\n\
 cat <<- EOF > server.ini\n\
-[NETWORK]\n\
-server_port = 11001\n\
-\n\
-\n\
-[SHARD]\n\
-is_master = false\n\
-name = Caves\n\
-\n\
-\n\
-[STEAM]\n\
-master_server_port = 27019\n\
-authentication_port = 8769\n\
-\n\
-\n\
-[ACCOUNT]\n\
-encode_user_path = true\n\
+    [NETWORK]\n\
+    server_port = 11001\n\
+    \n\
+    \n\
+    [SHARD]\n\
+    is_master = false\n\
+    name = Caves\n\
+    \n\
+    \n\
+    [STEAM]\n\
+    master_server_port = 27019\n\
+    authentication_port = 8769\n\
+    \n\
+    \n\
+    [ACCOUNT]\n\
+    encode_user_path = true\n\
 EOF\n\
 fi\n\
 \n\
 if [ ! -f worldgenoverride.lua ]; then\n\
 cat <<- EOF > worldgenoverride.lua\n\
-return {\n\
-    override_enabled = true,\n\
-    preset = "DST_CAVE"\n\
-}\n\
+    return {\n\
+        override_enabled = true,\n\
+        preset = \"DST_CAVE\",\n\
+    }\n\
 EOF\n\
 fi\n\
 \n\
