@@ -21,6 +21,7 @@ VOLUME ["$CLUSTER_PATH"]
 
 # Generate Config Files
 RUN echo "\
+./steamcmd.sh +login anonymous +force_install_dir \$INSTALL_PATH +app_update 343050 validate +quit\n\
 mkdir -p \$CLUSTER_PATH/\$CLUSTER_NAME/Master\n\
 mkdir -p \$CLUSTER_PATH/\$CLUSTER_NAME/Caves\n\
 \n\
